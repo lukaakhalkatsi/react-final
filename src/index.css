@@ -1,0 +1,14 @@
+/* Import main SASS file */
+@import './styles/main.scss';
+
+/* App wrapper styles */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+}
+
