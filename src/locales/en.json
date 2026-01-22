@@ -1,0 +1,60 @@
+{
+  "nav": {
+    "home": "Home",
+    "favorites": "Favorites",
+    "about": "About"
+  },
+  "home": {
+    "title": "Pokemon Explorer",
+    "searchPlaceholder": "Search Pokemon...",
+    "loading": "Loading Pokemon...",
+    "error": "Error loading Pokemon",
+    "noResults": "No Pokemon found",
+    "loadMore": "Load More",
+    "filterByType": "Filter by Type",
+    "allTypes": "All Types"
+  },
+  "pokemon": {
+    "details": "Details",
+    "stats": "Stats",
+    "abilities": "Abilities",
+    "types": "Types",
+    "height": "Height",
+    "weight": "Weight",
+    "baseExperience": "Base Experience",
+    "addToFavorites": "Add to Favorites",
+    "removeFromFavorites": "Remove from Favorites",
+    "evolutionChain": "Evolution Chain",
+    "noEvolution": "This Pokemon does not evolve",
+    "viewDetails": "View Details"
+  },
+  "favorites": {
+    "title": "My Pokemon Team",
+    "empty": "No Pokemon in your team yet",
+    "emptyDescription": "Start adding Pokemon to build your team!",
+    "maxReached": "Maximum team size reached (6 Pokemon)",
+    "remove": "Remove",
+    "clearAll": "Clear All",
+    "teamCount": "Team: {count}/6"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "retry": "Retry",
+    "close": "Close",
+    "back": "Back",
+    "save": "Save",
+    "cancel": "Cancel"
+  },
+  "theme": {
+    "light": "Light",
+    "dark": "Dark",
+    "toggle": "Toggle Theme"
+  },
+  "language": {
+    "english": "English",
+    "georgian": "Georgian",
+    "switch": "Switch Language"
+  }
+}
+
