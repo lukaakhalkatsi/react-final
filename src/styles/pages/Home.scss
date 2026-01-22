@@ -1,0 +1,37 @@
+@import '../mixins';
+
+.home {
+  min-height: calc(100vh - 200px);
+  padding: $spacing-xl 0;
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 $spacing-lg;
+  }
+
+  &__title {
+    text-align: center;
+    margin-bottom: $spacing-xl;
+    font-size: $font-size-4xl;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+
+    @include mobile {
+      font-size: $font-size-3xl;
+    }
+  }
+
+  &__search {
+    margin-bottom: $spacing-xl;
+  }
+
+  &__load-more {
+    @include flex-center;
+    margin-top: $spacing-2xl;
+    padding: $spacing-xl 0;
+  }
+}
+

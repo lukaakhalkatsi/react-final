@@ -1,0 +1,64 @@
+@import '../mixins';
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: $z-modal-backdrop;
+  @include flex-center;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--bg-card);
+  border-radius: $radius-xl;
+  z-index: $z-modal;
+  max-width: 90vw;
+  max-height: 90vh;
+  overflow: auto;
+  box-shadow: $shadow-xl;
+  @include custom-scrollbar;
+
+  @include mobile {
+    max-width: 95vw;
+  }
+}
+
+.modal-header {
+  @include flex-between;
+  padding: $spacing-lg;
+  border-bottom: 1px solid var(--border-color);
+
+  h2 {
+    margin: 0;
+  }
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  font-size: $font-size-2xl;
+  cursor: pointer;
+  color: var(--text-secondary);
+  width: 32px;
+  height: 32px;
+  @include flex-center;
+  border-radius: $radius-full;
+  transition: all $transition-base;
+
+  &:hover {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+  }
+}
+
+.modal-content {
+  padding: $spacing-lg;
+}
+

@@ -1,0 +1,7 @@
+@import '../mixins';
+
+.card {
+  @include card-base;
+  cursor: pointer;
+}
+

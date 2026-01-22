@@ -1,0 +1,77 @@
+@import '../mixins';
+
+.evolution-chain {
+  &__title {
+    margin-bottom: $spacing-md;
+    font-size: $font-size-xl;
+  }
+
+  &__list {
+    @include flex-center;
+    gap: $spacing-md;
+    flex-wrap: wrap;
+
+    @include mobile {
+      @include flex-column;
+    }
+  }
+
+  &__item {
+    @include flex-center;
+    gap: $spacing-sm;
+  }
+
+  &__arrow {
+    @include flex-center;
+    @include flex-column;
+    gap: $spacing-xs;
+    color: var(--text-secondary);
+    font-size: $font-size-xl;
+  }
+
+  &__level {
+    font-size: $font-size-xs;
+    color: var(--text-secondary);
+  }
+
+  &__pokemon {
+    @include flex-column;
+    @include flex-center;
+    gap: $spacing-sm;
+    cursor: pointer;
+    padding: $spacing-md;
+    border-radius: $radius-lg;
+    transition: all $transition-base;
+
+    &:hover {
+      background: var(--bg-secondary);
+      transform: translateY(-5px);
+    }
+  }
+
+  &__image {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+
+    @include mobile {
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  &__name {
+    font-size: $font-size-sm;
+    font-weight: 600;
+    color: var(--text-primary);
+    text-align: center;
+    text-transform: capitalize;
+  }
+
+  &__empty {
+    text-align: center;
+    color: var(--text-secondary);
+    padding: $spacing-xl;
+  }
+}
+

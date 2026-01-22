@@ -1,0 +1,101 @@
+@import '../mixins';
+
+.favorites {
+  min-height: calc(100vh - 200px);
+  padding: $spacing-xl 0;
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 $spacing-lg;
+  }
+
+  &__header {
+    @include flex-between;
+    margin-bottom: $spacing-xl;
+    flex-wrap: wrap;
+    gap: $spacing-md;
+
+    @include mobile {
+      @include flex-column;
+      align-items: flex-start;
+    }
+  }
+
+  &__title {
+    font-size: $font-size-4xl;
+    margin: 0;
+
+    @include mobile {
+      font-size: $font-size-3xl;
+    }
+  }
+
+  &__info {
+    @include flex-center;
+    gap: $spacing-md;
+  }
+
+  &__count {
+    font-size: $font-size-lg;
+    color: var(--text-secondary);
+    font-weight: 600;
+  }
+
+  &__max-warning {
+    padding: $spacing-md;
+    background: var(--color-warning);
+    color: white;
+    border-radius: $radius-md;
+    margin-bottom: $spacing-lg;
+    text-align: center;
+    font-weight: 500;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: $spacing-lg;
+
+    @include mobile {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: $spacing-md;
+    }
+  }
+
+  &__card-wrapper {
+    position: relative;
+    @include flex-column;
+    gap: $spacing-sm;
+  }
+
+  &__remove-btn {
+    width: 100%;
+  }
+
+  &__empty {
+    @include flex-center;
+    @include flex-column;
+    gap: $spacing-lg;
+    padding: $spacing-2xl;
+    text-align: center;
+  }
+
+  &__empty-icon {
+    font-size: 4rem;
+    opacity: 0.5;
+  }
+
+  &__empty-title {
+    font-size: $font-size-2xl;
+    color: var(--text-primary);
+    margin: 0;
+  }
+
+  &__empty-description {
+    font-size: $font-size-base;
+    color: var(--text-secondary);
+    max-width: 400px;
+  }
+}
+

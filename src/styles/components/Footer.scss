@@ -1,0 +1,38 @@
+@import '../mixins';
+
+.footer {
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border-color);
+  padding: $spacing-xl 0;
+  margin-top: auto;
+}
+
+.footer__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 $spacing-lg;
+  @include flex-column;
+  gap: $spacing-sm;
+  align-items: center;
+  text-align: center;
+}
+
+.footer__text {
+  color: var(--text-secondary);
+  font-size: $font-size-sm;
+}
+
+.footer__link {
+  color: var(--color-primary);
+  text-decoration: underline;
+
+  &:hover {
+    color: var(--color-primary-dark);
+  }
+}
+
+.footer__copyright {
+  color: var(--text-secondary);
+  font-size: $font-size-xs;
+}
+

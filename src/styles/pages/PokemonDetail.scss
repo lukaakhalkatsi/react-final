@@ -1,0 +1,176 @@
+@import '../mixins';
+
+.pokemon-detail {
+  min-height: calc(100vh - 200px);
+  padding: $spacing-xl 0;
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 $spacing-lg;
+  }
+
+  &__back {
+    margin-bottom: $spacing-lg;
+  }
+
+  &__header {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: $spacing-xl;
+    margin-bottom: $spacing-2xl;
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__image-section {
+    @include flex-column;
+    gap: $spacing-md;
+    align-items: center;
+  }
+
+  &__image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    cursor: pointer;
+    transition: transform $transition-base;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  &__favorite-btn {
+    width: 100%;
+  }
+
+  &__info {
+    @include flex-column;
+    gap: $spacing-md;
+  }
+
+  &__name {
+    font-size: $font-size-4xl;
+    margin: 0;
+
+    @include mobile {
+      font-size: $font-size-3xl;
+    }
+  }
+
+  &__id {
+    font-size: $font-size-lg;
+    color: var(--text-secondary);
+  }
+
+  &__description {
+    font-size: $font-size-base;
+    line-height: 1.8;
+    color: var(--text-secondary);
+  }
+
+  &__types {
+    @include flex-center;
+    gap: $spacing-sm;
+    flex-wrap: wrap;
+  }
+
+  &__type {
+    padding: $spacing-sm $spacing-md;
+    border-radius: $radius-full;
+    font-size: $font-size-sm;
+    font-weight: 600;
+    color: white;
+    text-transform: capitalize;
+  }
+
+  &__stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $spacing-md;
+    padding: $spacing-lg;
+    background: var(--bg-secondary);
+    border-radius: $radius-lg;
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__stat {
+    @include flex-column;
+    gap: $spacing-xs;
+    text-align: center;
+  }
+
+  &__stat-label {
+    font-size: $font-size-sm;
+    color: var(--text-secondary);
+  }
+
+  &__stat-value {
+    font-size: $font-size-lg;
+    font-weight: 600;
+    color: var(--text-primary);
+  }
+
+  &__sections {
+    @include flex-column;
+    gap: $spacing-xl;
+  }
+
+  &__section {
+    background: var(--bg-card);
+    padding: $spacing-xl;
+    border-radius: $radius-lg;
+    box-shadow: $shadow-md;
+  }
+
+  &__section-title {
+    margin-bottom: $spacing-lg;
+    font-size: $font-size-2xl;
+  }
+
+  &__abilities {
+    @include flex-center;
+    gap: $spacing-sm;
+    flex-wrap: wrap;
+  }
+
+  &__ability {
+    padding: $spacing-sm $spacing-md;
+    background: var(--bg-secondary);
+    border-radius: $radius-md;
+    font-size: $font-size-sm;
+    color: var(--text-primary);
+    text-transform: capitalize;
+  }
+
+  &__ability-hidden {
+    font-size: $font-size-xs;
+    color: var(--text-secondary);
+    margin-left: $spacing-xs;
+  }
+
+  &__image-modal {
+    max-width: 600px;
+  }
+
+  &__modal-image {
+    width: 100%;
+    height: auto;
+    border-radius: $radius-lg;
+  }
+
+  &__error {
+    @include flex-center;
+    @include flex-column;
+    gap: $spacing-md;
+    padding: $spacing-2xl;
+    text-align: center;
+  }
+}
+

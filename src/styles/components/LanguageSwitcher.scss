@@ -1,0 +1,30 @@
+@import '../mixins';
+
+.language-switcher {
+  @include flex-center;
+  gap: $spacing-sm;
+  padding: $spacing-sm $spacing-md;
+  border: 1px solid var(--border-color);
+  border-radius: $radius-md;
+  background: var(--bg-card);
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all $transition-base;
+  font-size: $font-size-sm;
+
+  &:hover {
+    background: var(--bg-secondary);
+    border-color: var(--color-primary);
+  }
+
+  &__text {
+    font-size: $font-size-lg;
+  }
+
+  &__label {
+    @include mobile {
+      display: none;
+    }
+  }
+}
+

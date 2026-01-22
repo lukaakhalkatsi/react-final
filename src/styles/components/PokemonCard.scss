@@ -1,0 +1,68 @@
+@import '../mixins';
+
+.pokemon-card {
+  @include card-base;
+  @include flex-column;
+  overflow: hidden;
+  height: 100%;
+
+  &__image-wrapper {
+    width: 100%;
+    padding: $spacing-lg;
+    background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-card) 100%);
+    @include flex-center;
+    min-height: 200px;
+  }
+
+  &__image {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    object-fit: contain;
+    transition: transform $transition-base;
+
+    .pokemon-card:hover & {
+      transform: scale(1.1);
+    }
+  }
+
+  &__content {
+    padding: $spacing-md;
+    @include flex-column;
+    gap: $spacing-sm;
+  }
+
+  &__header {
+    @include flex-between;
+    align-items: flex-start;
+  }
+
+  &__name {
+    font-size: $font-size-lg;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0;
+  }
+
+  &__id {
+    font-size: $font-size-sm;
+    color: var(--text-secondary);
+    font-weight: 500;
+  }
+
+  &__types {
+    @include flex-center;
+    gap: $spacing-xs;
+    flex-wrap: wrap;
+  }
+
+  &__type {
+    padding: $spacing-xs $spacing-sm;
+    border-radius: $radius-full;
+    font-size: $font-size-xs;
+    font-weight: 600;
+    color: white;
+    text-transform: capitalize;
+  }
+}
+

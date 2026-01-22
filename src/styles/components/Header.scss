@@ -1,0 +1,96 @@
+@import '../mixins';
+
+.header {
+  background: var(--bg-card);
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: $z-sticky;
+  box-shadow: $shadow-sm;
+}
+
+.header__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: $spacing-md $spacing-lg;
+  @include flex-between;
+  gap: $spacing-lg;
+
+  @include mobile {
+    padding: $spacing-sm $spacing-md;
+    flex-wrap: wrap;
+  }
+}
+
+.header__logo {
+  @include flex-center;
+  gap: $spacing-sm;
+  font-size: $font-size-xl;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: transform $transition-base;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &-icon {
+    font-size: $font-size-2xl;
+  }
+}
+
+.header__nav {
+  @include flex-center;
+  gap: $spacing-lg;
+
+  @include mobile {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    margin-top: $spacing-sm;
+  }
+}
+
+.header__nav-link {
+  padding: $spacing-sm $spacing-md;
+  color: var(--text-secondary);
+  text-decoration: none;
+  border-radius: $radius-md;
+  transition: all $transition-base;
+  position: relative;
+
+  &:hover {
+    color: var(--color-primary);
+    background: var(--bg-secondary);
+  }
+
+  &.active {
+    color: var(--color-primary);
+    font-weight: 600;
+  }
+}
+
+.header__badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background: var(--color-danger);
+  color: white;
+  border-radius: $radius-full;
+  width: 18px;
+  height: 18px;
+  @include flex-center;
+  font-size: $font-size-xs;
+  font-weight: 600;
+}
+
+.header__controls {
+  @include flex-center;
+  gap: $spacing-sm;
+
+  @include mobile {
+    order: 2;
+  }
+}
+
